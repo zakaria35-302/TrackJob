@@ -1,0 +1,345 @@
+<resources>
+    <string name="app_name">JobTrack</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <!-- Navigation Drawer menu labels -->
+    <string name="nav_home">Home</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_job">Job</string>
+    <string name="nav_task">Task</string>
+    <string name="nav_admin">Admin</string>
+    <string name="nav_notifications">Notifications</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_about_us">About Us</string>
+
+    <!-- Toolbar titles when navigation menu item is selected -->
+    <string-array name="nav_item_activity_titles">
+        <item>Home</item>
+        <item>Profile</item>
+        <item>Job</item>
+        <item>Task</item>
+        <item>Admin</item>
+        <item>Notifications</item>
+        <item>Settings</item>
+    </string-array>
+
+    <string-array name="employee_gender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Others</item>
+    </string-array>
+    <string-array name="employee_institute">
+        <item>Daffodil</item>
+        <item>DIU</item>
+        <item>DCL</item>
+    </string-array>
+
+    <string-array name="employee_department">
+        <item>CSE</item>
+        <item>EEE</item>
+        <item>SWE</item>
+        <item>English</item>
+        <item>BBA</item>
+        <item>ETE</item>
+        <item>Commerce</item>
+        <item>Real Estate</item>
+        <item>THM</item>
+        <item>Entrepreneurship</item>
+        <item>MCT</item>
+        <item>NS</item>
+        <item>ESDP</item>
+        <item>TE</item>
+        <item>Architecture</item>
+        <item>CE</item>
+        <item>Pharmachy</item>
+        <item>NFE</item>
+        <item>PH</item>
+        <item>Law</item>
+        <item>JMC</item>
+        <item>DS</item>
+    </string-array>
+
+    <string-array name="employee_marital_status">
+        <item>Married</item>
+        <item>Single</item>
+        <item>divorces</item>
+    </string-array>
+
+    <string-array name="employee_blood_group">
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </string-array>
+
+    <string-array name="employee_religion">
+        <item>Islam</item>
+        <item>Hindu</item>
+    </string-array>
+
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+
+    <string name="pref_title_ringtone">Ringtone</string>
+
+
+    <string-array name="employee_task_accessability">
+        <item>Public</item>
+        <item>Proctected</item>
+        <item>Private</item>
+    </string-array>
+
+    <string-array name="employee_task_progress">
+        <item>0</item>
+        <item>20</item>
+        <item>30</item>
+        <item>50</item>
+        <item>80</item>
+        <item>100</item>
+    </string-array>
+
+    <string-array name="employee_task_priority">
+        <item>Very Low</item>
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+        <item>Very High</item>
+    </string-array>
+
+    <string-array name="employee_task_status">
+        <item>Pending</item>
+        <item>Ongoing</item>
+        <item>Complete</item>
+        <item>Done</item>
+    </string-array>
+
+    <string-array name="employee_task_role">
+        <item>In-Charge</item>
+        <item>Member</item>
+    </string-array>
+
+    <string-array name="employee_job_title">
+        <item>Ecure</item>
+        <item>Student Portal</item>
+        <item>UNDP</item>
+    </string-array>
+
+    <string name="activity_title_about_us">About Us</string>
+    <string name="activity_title_privacy_policy">Privacy Policy</string>
+    <string name="action_clear_all">Clear All</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_mark_all_read">Mark All as Read</string>
+    <string name="privacy_policy">Privacy Policy</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="this_is_about_us_section">This is About US Section</string>
+    <string name="hint_emp_id">Employee Id</string>
+    <string name="hint_emp_pass">Password</string>
+    <string name="btn_sign_in">Sign In</string>
+    <string name="hint_emp_name">Name</string>
+    <string name="hint_emp_email">Email</string>
+    <string name="hint_enter_job_department">Department</string>
+    <string name="btn_sign_up">Sign Up</string>
+    <string name="text_already_have_account">Already Have An Account ?</string>
+    <string name="button_sign_in">Sign In</string>
+    <string name="set_department">Set Department</string>
+    <string name="set_designation">Set Designation</string>
+    <string name="hint_enter_employee_designation">Enter Designation</string>
+    <string name="position_button_cancel">Cancel</string>
+    <string name="button_ok">Ok</string>
+    <string name="text_job_title">Job Title</string>
+    <string name="text_job_owner">Job Owner</string>
+    <string name="text_employee_department">Department</string>
+    <string name="text_task_given_date">Given Date</string>
+    <string name="text_task_est_date">Est. Date</string>
+    <string name="status">Status</string>
+    <string name="progress">Progress</string>
+    <string name="priority">Priority</string>
+
+    <string name="text_task_title">Task Title</string>
+    <string name="text_task_owner">Task Owner</string>
+    <string name="text_task_status">Task Status</string>
+    <string name="text_task_priority">Task Priority</string>
+    <string name="text_task_progress">Progress</string>
+    <string name="hint_enter_job_title">Enter Job Title</string>
+    <string name="text_job_description">Job Description</string>
+    <string name="hint_enter_job_description">Enter Job Description</string>
+
+
+    <string name="text_task_date">Date</string>
+    <string name="text_task_dead_line">Deadline</string>
+    <string name="check_box_task_had_dead_line">This task has a dead line</string>
+    <string name="check_box_job_had_dead_line">This Job has a dead line</string>
+    <string name="hint_enter_task_dead">Select Task Dead</string>
+    <string name="hint_enter_job_dead">Select Job Dead</string>
+    <string name="text_task_Accesibility">Accesibility</string>
+    <string name="hint_enter_task_Accesibility">Select Task Accesibility</string>
+    <string name="hint_enter_job_Accesibility">Select Job Accesibility</string>
+    <string name="hint_enter_task_progress">Select Task Progress</string>
+    <string name="hint_enter_job_progress">Select Job Progress</string>
+    <string name="hint_enter_task_priority">Select Task Priority</string>
+    <string name="hint_enter_job_priority">Select Job Priority</string>
+    <string name="hint_enter_task_status">Select Task Status</string>
+    <string name="hint_enter_job_status">Select Job Status</string>
+    <string name="hint_select_task_department">Select Task Department</string>
+    <string name="hint_enter_task_department">Please Enter Task Department</string>
+    <string name="text_task_assign_to">Assign to</string>
+    <string name="hint_enter_task_asign_to">Select Task Assign to</string>
+    <string name="text_task_role">Role</string>
+    <string name="hint_enter_task_role">Select Task Role</string>
+    <string name="task_activity_add_to_list">Add to List</string>
+    <string name="task_activity_remove_from_list">Remove from List</string>
+    <string name="save">Save</string>
+    <string name="back">Back</string>
+
+    <string name="text_select_job">Select Job</string>
+    <string name="button_task_management">Task Management</string>
+    <string name="text_employee_gender">Gender</string>
+    <string name="text_employee_institute">Institute</string>
+    <string name="text_employee_date_of_birth">Date of Birth</string>
+    <string name="text_employee_marital_status">Marital Status</string>
+    <string name="text_employee_blood_group">Blood Group</string>
+    <string name="text_employee_im">IM</string>
+    <string name="text_employee_religion">Religion</string>
+    <string name="text_employee_mobile">Mobile</string>
+    <string name="text_employee_office_phone">Office Phone</string>
+    <string name="text_task_Attribute">Attribute</string>
+
+
+    <string name="hint_enter_email">Enter your email</string>
+    <string name="hint_enter_employee_id">Enter your User Id</string>
+    <string name="hint_enter_employeename">Enter your name</string>
+    <string name="hint_enter_password">Enter password</string>
+    <string name="hint_enter_date_of_birth">Select Your Date of Birth</string>
+    <string name="hint_enter_im">Enter Your IM</string>
+    <string name="hint_enter_mobile_number">Enter Your Mobile Number</string>
+    <string name="hint_enter_office_phone">Enter Your Office Phone</string>
+    <string name="hint_enter_task_title">Enter task Title</string>
+    <string name="text_task_description">Description</string>
+    <string name="hint_enter_task_description">Enter task Description</string>
+    <string name="hint_enter_task_deadline">Select Task Deadline</string>
+    <string name="hint_enter_employee_new_designation">Please enter new Designation</string>
+    <string name="title_activity_profile">ProfileActivity</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="action_settings">Settings</string>
+    <string name="text_ecure_notification">ecure notification</string>
+    <string name="text_jobtrack_notification">JobTrack Notification</string>
+    <string name="this_is_privacy_policy_section">Privacy Policy Section</string>
+    <string name="text_employee_name">Name</string>
+    <string name="text_employee_email">Email</string>
+    <string name="department">Department</string>
+
+
+</resources>
