@@ -1,21 +1,30 @@
 package bd.httpdaffodilvarsity.JobTracking.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import bd.httpdaffodilvarsity.JobTracking.R;
+import bd.httpdaffodilvarsity.JobTracking.activity.CreateEmployeeJob;
+import bd.httpdaffodilvarsity.JobTracking.activity.CreateEmployeeTask;
+import bd.httpdaffodilvarsity.JobTracking.activity.SetDepartment;
+import bd.httpdaffodilvarsity.JobTracking.activity.SetDesignation;
 
 
 public class AdminFragment extends Fragment {
 
-    TextView tvEmployeeDepartment;
-    TextView tvEmployeeDesignation;
+    Button jobButton;
+    Button taskButton;
+    Button departmentButton;
+    Button designationButton;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -65,15 +74,45 @@ public class AdminFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_admin, container, false);
 
+        jobButton=(Button)rootView.findViewById(R.id.gototjob);
+        taskButton=(Button)rootView.findViewById(R.id.gototask);
+        departmentButton=(Button)rootView.findViewById(R.id.gotodepartment);
+        designationButton=(Button)rootView.findViewById(R.id.gotodesignation);
 
-     /*   tvEmployeeDesignation = (TextView) rootView.findViewById(R.id.textViewAdminSetDesignation);
-        tvEmployeeDesignation.setOnClickListener(new View.OnClickListener() {
+
+        jobButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AdminFragment.this.getActivity(), CreateEmployeeJob.class);
+                AdminFragment.this.startActivity(intent);
+            }
+        });
+
+
+        taskButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AdminFragment.this.getActivity(), CreateEmployeeTask.class);
+                AdminFragment.this.startActivity(intent);
+            }
+        });
+
+
+        departmentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AdminFragment.this.getActivity(), SetDepartment.class);
+                AdminFragment.this.startActivity(intent);
+            }
+        });
+
+        designationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(AdminFragment.this.getActivity(), SetDesignation.class);
                 AdminFragment.this.startActivity(intent);
             }
-        });*/
+        });
 
 
     /*    tvEmployeeDepartment = (TextView) rootView.findViewById(R.id.textViewAdminSetDepartment);

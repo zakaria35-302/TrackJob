@@ -40,7 +40,6 @@ public class CreateEmployeeJob extends AppCompatActivity {
     CheckBox checkboxCreateJobHadDeadline;
     // Spinner edittextCreateJobProgress,getEdittextCreateJobProgress,edittextCreateStatus,edittextCreateJobRole;
 
-
     String server_url = "http://192.168.10.223:8080/jobmanagement";
     private static String TAG = MainActivity.class.getSimpleName();
     AlertDialog.Builder builder;
@@ -51,6 +50,7 @@ public class CreateEmployeeJob extends AppCompatActivity {
 
     ArrayAdapter<CharSequence> empJobProgressAdapter, empJobPriorityAdapter,
             empJobStatusAdapter, empJobDepartmentAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -160,7 +160,6 @@ public class CreateEmployeeJob extends AppCompatActivity {
         newFragment.show(getSupportFragmentManager(), "datePicker");
     }
 
-
     public static class DatePickerFragment extends DialogFragment
             implements DatePickerDialog.OnDateSetListener {
 
@@ -185,7 +184,6 @@ public class CreateEmployeeJob extends AppCompatActivity {
         btnJobSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
 
                 JSONObject js = new JSONObject();
                 try {

@@ -83,7 +83,7 @@ public class JobFragment extends Fragment {
         View rootView= inflater.inflate(R.layout.fragment_jobs, container, false);
 
 
-        listEmployeeJobTitle=(ListView) rootView.findViewById(R.id.listEmployeeJobTitle);
+        listEmployeeJobTitle=(ListView)rootView.findViewById(R.id.listEmployeeJobTitle);
 
         fetchingData() ;
 

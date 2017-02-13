@@ -340,6 +340,8 @@
     <string name="text_employee_name">Name</string>
     <string name="text_employee_email">Email</string>
     <string name="department">Department</string>
+    <string name="dummu">dummu</string>
+    <string name="jobs">Jobs</string>
 
 
 </resources>
