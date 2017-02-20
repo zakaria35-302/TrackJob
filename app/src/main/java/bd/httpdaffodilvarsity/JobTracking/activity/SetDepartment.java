@@ -43,7 +43,7 @@ public class SetDepartment extends AppCompatActivity {
     }
     void fetchingData(){
 
-        String myURL =  "http://192.168.10.223:8080/departmentinfo";
+        String myURL =  "http://jts.diu.edu.bd/departmentinfo";
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(myURL, new Response.Listener<JSONArray>() {
             @Override

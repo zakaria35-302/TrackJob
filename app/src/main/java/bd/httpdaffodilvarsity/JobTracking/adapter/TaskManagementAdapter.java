@@ -25,7 +25,6 @@ public class TaskManagementAdapter extends ArrayAdapter {
 
 
    /* public void add(TaskManagementClass object) {
-
         list.add(object);
         super.add(object);
     }*/

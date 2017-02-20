@@ -24,7 +24,6 @@ import static bd.httpdaffodilvarsity.JobTracking.R.id.textViewRowDesignatioName;
 
 public class SetDesignation extends AppCompatActivity {
 
-
     ListView designationList;
 
     @Override
@@ -50,7 +49,7 @@ public class SetDesignation extends AppCompatActivity {
 
         void fetchingData(){
 
-        String myURL =  "http://192.168.10.223:8080/designationinfo";
+        String myURL =  "http://jts.diu.edu.bd/designationinfo";
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(myURL, new Response.Listener<JSONArray>() {
             @Override
@@ -87,6 +86,5 @@ public class SetDesignation extends AppCompatActivity {
 
         bd.httpdaffodilvarsity.JobTracking.service.AppController.getInstance().addToRequestQueue(jsonArrayRequest);
         Toast.makeText(getApplicationContext(), "Data Loaded Successfully!", Toast.LENGTH_SHORT).show();
-
     }
 }

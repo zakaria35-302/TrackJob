@@ -14,11 +14,9 @@ public class LogInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
     }
-
     public void onSignInPressed(View view) {
         Intent intent =new Intent(LogInActivity.this,MainActivity.class);
         //Intent intent =new Intent(LogInActivity.this,ProfileActivity.class);
         startActivity(intent);
     }
-
 }

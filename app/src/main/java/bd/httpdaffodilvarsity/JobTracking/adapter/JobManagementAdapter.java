@@ -31,7 +31,6 @@ public class JobManagementAdapter extends ArrayAdapter {
         TextView employeeJobStatus;
         TextView employeeJobProgress;
         TextView employeeJobPriority;
-
     }
 
     @Override
@@ -66,12 +65,10 @@ public class JobManagementAdapter extends ArrayAdapter {
             holder.employeeJobProgress = (TextView) row.findViewById(R.id.text_job_progress);
             holder.employeeJobPriority = (TextView) row.findViewById(R.id.text_job_priority);
             row.setTag(holder);
-
         } else {
             holder = (ViewHolder) row.getTag();
             /*SuperiorClass SC = (SuperiorClass) getItem(position);
             holder.imgSuperior.setImageResource(SC.getImage_resource());*/
-
         }
 
        /* //HashMap<String, String> map = list.get(position);
@@ -85,7 +82,5 @@ public class JobManagementAdapter extends ArrayAdapter {
         holder.employeeJobProgress.setText(SC.getEmployeeJobProgress());
         holder.employeeJobPriority.setText(SC.getEmployeeJobPriority());
         return row;*/
-
         return super.getView(position, convertView, parent);
-
     }}

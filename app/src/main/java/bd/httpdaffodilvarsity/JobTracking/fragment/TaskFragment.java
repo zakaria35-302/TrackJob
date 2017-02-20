@@ -108,7 +108,7 @@ public class TaskFragment extends Fragment {
 
     void fetchingData(){
 
-        String myURL =  "http://192.168.10.223:8080/task";
+        String myURL =  "http://jts.diu.edu.bd/task";
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(myURL, new Response.Listener<JSONArray>() {
             @Override

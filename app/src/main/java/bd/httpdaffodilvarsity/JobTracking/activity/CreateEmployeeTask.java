@@ -32,7 +32,6 @@ public class CreateEmployeeTask extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_employee_task);
 
-
         editTextTaskDeadCreate = (EditText) findViewById(R.id.edit_text_task_dead_create);
         final Calendar cal = Calendar.getInstance();
         year_x = cal.get(Calendar.YEAR);
@@ -154,4 +153,5 @@ public class CreateEmployeeTask extends AppCompatActivity {
         Intent taskBack = new Intent(CreateEmployeeTask.this, TaskManagement.class);
         startActivity(taskBack);
     }*/
+
 }

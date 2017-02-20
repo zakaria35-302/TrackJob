@@ -66,7 +66,6 @@ public class JobFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -101,7 +100,7 @@ public class JobFragment extends Fragment {
 
     void fetchingData(){
 
-        String myURL =  "http://192.168.10.223:8080/jobmanagement";
+        String myURL =  "http://jts.diu.edu.bd/jobmanagement";
 
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(myURL, new Response.Listener<JSONArray>() {
             @Override
@@ -121,7 +120,6 @@ public class JobFragment extends Fragment {
                 final String[] update_by = new String[response.length()];
                 final String[] update_time = new String[response.length()];
                 final String[] job_owner = new String[response.length()];
-
 
                 for (int i =0; i < response.length(); i++){
 
@@ -172,7 +170,6 @@ public class JobFragment extends Fragment {
                         intent.putExtra("UpdateTime", update_time[position]);
                         intent.putExtra("JobOwner", job_owner[position]);
                         startActivity(intent);
-
                     }
                 });
 
@@ -186,11 +183,7 @@ public class JobFragment extends Fragment {
         });
         bd.httpdaffodilvarsity.JobTracking.service.AppController.getInstance().addToRequestQueue(jsonArrayRequest);
         Toast.makeText(getActivity().getApplicationContext(), "Data Loaded Successfully!", Toast.LENGTH_SHORT).show();
-
     }
-
-
-
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
@@ -209,13 +202,11 @@ public class JobFragment extends Fragment {
 //                    + " must implement OnFragmentInteractionListener");
 //        }
     }
-
     @Override
     public void onDetach() {
         super.onDetach();
         mListener = null;
     }
-
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated

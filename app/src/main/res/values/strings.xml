@@ -93,6 +93,7 @@
         <item>6 hours</item>
         <item>Never</item>
     </string-array>
+
     <string-array name="pref_sync_frequency_values">
         <item>15</item>
         <item>30</item>
@@ -219,7 +220,7 @@
     <string name="text_select_job">Select Job</string>
     <string name="button_task_management">Task Management</string>
     <string name="text_employee_gender">Gender</string>
-    <string name="text_employee_institute">Institute</string>
+    <string name="text_employee_id">Employee ID</string>
     <string name="text_employee_date_of_birth">Date of Birth</string>
     <string name="text_employee_marital_status">Marital Status</string>
     <string name="text_employee_blood_group">Blood Group</string>
@@ -342,6 +343,9 @@
     <string name="department">Department</string>
     <string name="dummu">dummu</string>
     <string name="jobs">Jobs</string>
+    <string name="text_employee_designation">Designation</string>
+    <string name="text_employee_password">Password</string>
+    <string name="text_employee_reports_to">Reports To</string>
 
 
 </resources>

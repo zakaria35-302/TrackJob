@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="bd.httpdaffodilvarsity.JobTracking.activity.ProfileActivity"
-    tools:showIn="@layout/activity_profile">
+    tools:context="bd.httpdaffodilvarsity.JobTracking.fragment.ProfileFragment"
+    tools:showIn="@layout/fragment_profile">
 
     <LinearLayout
         xmlns:tools="http://schemas.android.com/tools"
@@ -50,8 +50,34 @@
                      android:onClick="GoToEditUser"
                      android:textSize="@dimen/list_item_text_size"
                      android:textStyle="bold"/>
-
              </LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="@string/text_employee_id"
+                    android:textSize="@dimen/list_item_text_size"
+                    android:layout_width="0dp"
+                    android:textStyle="bold"
+                    android:paddingRight="15dp"
+                    android:textColor="@android:color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5" />
+
+                <TextView
+                    android:hint="710000100"
+                    android:textSize="@dimen/list_item_text_size"
+                    android:id="@+id/employeeidTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_weight="2"  />
+
+            </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -71,7 +97,7 @@
                 <TextView
                     android:hint="Mahmudul"
                     android:textSize="@dimen/list_item_text_size"
-                    android:id="@+id/text_profile_view_name"
+                    android:id="@+id/nameTv"
                     android:layout_width="0dp"
                     android:textColor="@android:color/black"
                     android:layout_height="wrap_content"
@@ -86,7 +112,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:text="@string/text_employee_institute"
+                    android:text="@string/text_employee_designation"
                     android:textSize="@dimen/list_item_text_size"
                     android:layout_width="0dp"
                     android:textStyle="bold"
@@ -96,9 +122,9 @@
                     android:layout_weight="1.5" />
 
                 <TextView
-                    android:hint="Daffodil International University"
+                    android:hint="Director"
                     android:textSize="@dimen/list_item_text_size"
-                    android:id="@+id/text_profile_view_institute"
+                    android:id="@+id/designationTv"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
@@ -123,7 +149,7 @@
                 <TextView
                     android:hint="IT"
                     android:textSize="@dimen/list_item_text_size"
-                    android:id="@+id/text_profile_view_department"
+                    android:id="@+id/departmentTv"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
@@ -132,207 +158,7 @@
             </LinearLayout>
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
 
-                <TextView
-                    android:text="@string/text_employee_date_of_birth"
-                    android:textSize="@dimen/list_item_text_size"
-                    android:layout_width="0dp"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.5" />
-
-                <TextView
-                    android:hint="12/12/1992"
-                    android:textSize="@dimen/list_item_text_size"
-                    android:id="@+id/text_profile_view_dateOfBirth"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:layout_weight="2" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:text="@string/text_employee_gender"
-                    android:textSize="@dimen/list_item_text_size"
-                    android:layout_width="0dp"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.5" />
-
-                <TextView
-                    android:hint="Male"
-                    android:textSize="@dimen/list_item_text_size"
-                    android:id="@+id/text_profile_view_gender"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:layout_weight="2" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:text="@string/text_employee_marital_status"
-                    android:textSize="@dimen/list_item_text_size"
-                    android:layout_width="0dp"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.5" />
-
-                <TextView
-                    android:hint="Married"
-                    android:textSize="@dimen/list_item_text_size"
-                    android:id="@+id/text_profile_view_maritalStatus"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:layout_weight="2" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:text="@string/text_employee_blood_group"
-                    android:textSize="@dimen/list_item_text_size"
-                    android:layout_width="0dp"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.5" />
-
-                <TextView
-                    android:hint="A+"
-                    android:textSize="@dimen/list_item_text_size"
-                    android:id="@+id/text_profile_view_bloodGroup"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:layout_weight="2" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:text="@string/text_employee_im"
-                    android:textSize="@dimen/list_item_text_size"
-                    android:layout_width="0dp"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.5" />
-
-                <TextView
-                    android:hint="Message"
-                    android:textSize="@dimen/list_item_text_size"
-                    android:id="@+id/text_profile_view_IM"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:layout_weight="2" />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:text="@string/text_employee_religion"
-                    android:textSize="@dimen/list_item_text_size"
-                    android:layout_width="0dp"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.5" />
-
-                <TextView
-                    android:hint="Muslim"
-                    android:textSize="@dimen/list_item_text_size"
-                    android:id="@+id/text_profile_view_religion"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:layout_weight="2" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:text="@string/text_employee_mobile"
-                    android:textSize="@dimen/list_item_text_size"
-                    android:layout_width="0dp"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/black"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.5" />
-
-                <TextView
-                    android:hint="01833745635"
-                    android:textSize="@dimen/list_item_text_size"
-                    android:id="@+id/text_profile_view_mobile"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:layout_weight="2" />
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:text="@string/text_employee_office_phone"
-                    android:textSize="@dimen/list_item_text_size"
-                    android:layout_width="0dp"
-                    android:textStyle="bold"
-                    android:textColor="@android:color/black"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1.5" />
-
-                <TextView
-                    android:hint="01763659873"
-                    android:textSize="@dimen/list_item_text_size"
-                    android:id="@+id/text_profile_view_officePhone"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:layout_weight="2" />
-
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -351,13 +177,41 @@
                 <TextView
                     android:hint="Mahmud@gmail.com"
                     android:textSize="@dimen/list_item_text_size"
-                    android:id="@+id/text_profile_view_email"
+                    android:id="@+id/emailTv"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:padding="10dp"
                     android:layout_weight="2" />
 
             </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="@string/text_employee_reports_to"
+                    android:textSize="@dimen/list_item_text_size"
+                    android:layout_width="0dp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5" />
+
+                <TextView
+                    android:hint="Mr. Arif"
+                    android:textSize="@dimen/list_item_text_size"
+                    android:id="@+id/reportsTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_weight="2" />
+
+            </LinearLayout>
+
 
         </LinearLayout>
 

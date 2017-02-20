@@ -1,5 +1,6 @@
 package bd.httpdaffodilvarsity.JobTracking.activity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -10,11 +11,25 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+
 import bd.httpdaffodilvarsity.JobTracking.R;
 
 public class RegistrationActivity extends AppCompatActivity {
 
-    String server_url= "http://192.168.10.223:8080/personinfo";
+    String server_url= "http://jts.diu.edu.bd/personinfo";
     private static String TAG = MainActivity.class.getSimpleName();
     AlertDialog.Builder builder;
     EditText editTextEmployeeId;
@@ -46,7 +61,7 @@ public class RegistrationActivity extends AppCompatActivity {
         spinnerEmployeeDepartment.setAdapter(empDepartmentAdapter);
         spinnerEmployeeDepartment.setSelection(0);
 
-        /*btnCreateEmployeeAccount.setOnClickListener(new View.OnClickListener() {
+        btnCreateEmployeeAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -54,7 +69,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 try {
 
                     js.put("employee_id", editTextEmployeeId.getText().toString());
-                    js.put("authenticate_code", editTextEmployeePassword.getText().toString());
+                    js.put("password", editTextEmployeePassword.getText().toString());
                     js.put("emp_name", editTextEmployeenameCreate.getText().toString());
                     js.put("emp_email", editTextEmailCreate.getText().toString());
                     js.put("current_dept_id", spinnerEmployeeDepartment.getSelectedItem().toString ());
@@ -96,9 +111,7 @@ public class RegistrationActivity extends AppCompatActivity {
                     }
                 }) {
 
-                    *//**
-                     * Passing some request headers
-                     *//*
+
                     @Override
                     public Map<String, String> getHeaders() throws AuthFailureError {
                         HashMap<String, String> headers = new HashMap<String, String>();
@@ -109,7 +122,7 @@ public class RegistrationActivity extends AppCompatActivity {
                 // Adding request to request queue
                 Volley.newRequestQueue(RegistrationActivity.this).add(jsonObjReq);
             }
-        });*/
+        });
     }
 
     public void GoToLoginActivity(View view) {
@@ -121,4 +134,5 @@ public class RegistrationActivity extends AppCompatActivity {
         Intent intent =new Intent(RegistrationActivity.this,LogInActivity.class);
         startActivity(intent);
     }
+
 }

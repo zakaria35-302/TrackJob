@@ -1,5 +1,4 @@
 package bd.httpdaffodilvarsity.JobTracking.activity;
-
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
@@ -14,7 +13,6 @@ import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
-
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -40,17 +38,16 @@ public class CreateEmployeeJob extends AppCompatActivity {
     CheckBox checkboxCreateJobHadDeadline;
     // Spinner edittextCreateJobProgress,getEdittextCreateJobProgress,edittextCreateStatus,edittextCreateJobRole;
 
-    String server_url = "http://192.168.10.223:8080/jobmanagement";
+    String server_url = "http://jts.diu.edu.bd/jobmanagement";
     private static String TAG = MainActivity.class.getSimpleName();
-    AlertDialog.Builder builder;
 
+    AlertDialog.Builder builder;
     //Button btn;
     int year_x, month_x, day_x;
     Spinner spinnerEmployeeJobProgress, spinnerEmployeeJobPriority, spinnerEmployeeJobStatus, spinnerEmployeejobDepartment;
 
     ArrayAdapter<CharSequence> empJobProgressAdapter, empJobPriorityAdapter,
             empJobStatusAdapter, empJobDepartmentAdapter;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,8 +117,6 @@ public class CreateEmployeeJob extends AppCompatActivity {
          getSpinnerEmployeeJobRole.setAdapter(empJobRoleAdapter);*/
 
         addJobManagement();
-
-
     }
 
     private void showDate(int year, int month, int day) {
@@ -220,10 +215,8 @@ public class CreateEmployeeJob extends AppCompatActivity {
                                 });
                                 AlertDialog alertDialog = builder.create();
                                 alertDialog.show();
-
                             }
                         }, new Response.ErrorListener() {
-
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         VolleyLog.d(TAG, "Error: " + error.getMessage());
