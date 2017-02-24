@@ -23,9 +23,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
 import bd.httpdaffodilvarsity.JobTracking.R;
 import bd.httpdaffodilvarsity.JobTracking.activity.CreateEmployeeTask;
 import bd.httpdaffodilvarsity.JobTracking.activity.TaskListDetails;
+import bd.httpdaffodilvarsity.JobTracking.other.Task;
 
 import static bd.httpdaffodilvarsity.JobTracking.R.id.textviewforTasklist;
 
@@ -114,26 +117,8 @@ public class TaskFragment extends Fragment {
             @Override
             public void onResponse(JSONArray response) {
 
-
-                final String[] task_title = new String[response.length()];
-                final String[] task_description = new String[response.length()];
-                final String[] startdate = new String[response.length()];
-                final String[] estimated_date = new String[response.length()];
-                final String[] actual_enddate = new String[response.length()];
-                final String[] status = new String[response.length()];
-                final String[] percent_done = new String[response.length()];
-                final String[] priority = new String[response.length()];
-                final String[] owner_comments = new String[response.length()];
-                final String[] incharge_comments = new String[response.length()];
-                final String[] task_owner_id = new String[response.length()];
-                final String[] job_id = new String[response.length()];
-                final String[] accesibility = new String[response.length()];
-                final String[] prev_owner_id = new String[response.length()];
-                final String[] created_by = new String[response.length()];
-                final String[] created_time = new String[response.length()];
-                final String[] update_by = new String[response.length()];
-                final String[] updated_time = new String[response.length()];
-
+                ArrayList<String> titleList = new ArrayList<>();
+                final ArrayList<Task> taskArrayList = new ArrayList<>();
 
 
                 for (int i =0; i < response.length(); i++){
@@ -142,53 +127,40 @@ public class TaskFragment extends Fragment {
 
                         JSONObject jsonObject = (JSONObject) response.get(i);
 
-                        task_title[i] = jsonObject.getString("task_title");
-                        task_description[i] = jsonObject.getString("task_description");
-                        startdate[i] = jsonObject.getString("startdate");
-                        estimated_date[i] = jsonObject.getString("estimated_date");
-                        actual_enddate[i] = jsonObject.getString("actual_enddate");
-                        status[i] = jsonObject.getString("status");
-                        percent_done[i] = jsonObject.getString("percent_done");
-                        priority[i] = jsonObject.getString("priority");
-                        owner_comments[i] = jsonObject.getString("owner_comments");
-                        incharge_comments[i] = jsonObject.getString("incharge_comments");
-                        task_owner_id[i] = jsonObject.getString("task_owner_id");
-                        job_id[i] = jsonObject.getString("job_id");
-                        accesibility[i] = jsonObject.getString("accesibility");
-                        prev_owner_id[i] = jsonObject.getString("prev_owner_id");
-                        created_by[i] = jsonObject.getString("created_by");
-                        created_time[i] = jsonObject.getString("created_time");
-                        update_by[i] = jsonObject.getString("update_by");
-                        updated_time[i] = jsonObject.getString("updated_time");
+                        Task task = new Task();
+                        titleList.add(jsonObject.getString("task_title"));
+                        task.setTaskTitle(jsonObject.getString("task_title"));
+                        task.setTaskDescription(jsonObject.getString("task_description"));
+                        task.setTaskStartDate(jsonObject.getString("startdate"));
+                        task.setTaskEstDate(jsonObject.getString("estimated_date"));
+                        task.setTaskEndDate(jsonObject.getString("actual_enddate"));
+                        task.setTaskStatus(jsonObject.getString("status"));
+                        task.setPercentDone(jsonObject.getString("percent_done"));
+                        task.setTaskPriority(jsonObject.getString("priority"));
+                        task.setTaskOwnerComment(jsonObject.getString("owner_comments"));
+                        task.setTaskInchargeComment(jsonObject.getString("incharge_comments"));
+                        task.setTaskOwnerId(jsonObject.getString("task_owner_id"));
+                        task.setJobId(jsonObject.getString("job_id"));
+                        task.setTaskAccessibility(jsonObject.getString("accesibility"));
+                        task.setPreOwnerId(jsonObject.getString("prev_owner_id"));
+                        task.setTaskCreatedBy(jsonObject.getString("created_by"));
+                        task.setTaskCreatedTime(jsonObject.getString("created_time"));
+                        task.setTaskUpdatedBy(jsonObject.getString("update_by"));
+                        task.setTaskUpdatedTime(jsonObject.getString("updated_time"));
+
+                        taskArrayList.add(task);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
                 }
 
-                listEmployeeTask.setAdapter(new ArrayAdapter(getActivity().getApplicationContext(), R.layout.task_list,textviewforTasklist,task_title));
+                listEmployeeTask.setAdapter(new ArrayAdapter(getActivity().getApplicationContext(), R.layout.task_list,textviewforTasklist,titleList));
 
                 listEmployeeTask.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         Intent intent = new Intent(TaskFragment.this.getActivity(), TaskListDetails.class);
-                        intent.putExtra("TaskTitle", task_title[position]);
-                        intent.putExtra("TaskDescription", task_description[position]);
-                        intent.putExtra("TaskStartDate", startdate[position]);
-                        intent.putExtra("TaskEstDate", estimated_date[position]);
-                        intent.putExtra("TaskEndDate", actual_enddate[position]);
-                        intent.putExtra("TaskStatus", status[position]);
-                        intent.putExtra("PercentDone", percent_done[position]);
-                        intent.putExtra("TaskPriority", priority[position]);
-                        intent.putExtra("TaskOwnerComment", owner_comments[position]);
-                        intent.putExtra("TaskInchargeComment", incharge_comments[position]);
-                        intent.putExtra("TaskOwnerId", task_owner_id[position]);
-                        intent.putExtra("JobId", job_id[position]);
-                        intent.putExtra("TaskAccessibility", accesibility[position]);
-                        intent.putExtra("PreOwnerId", prev_owner_id[position]);
-                        intent.putExtra("TaskCreatedBy", created_by[position]);
-                        intent.putExtra("TaskCreatedTime", created_time[position]);
-                        intent.putExtra("TaskUpdatedBy", update_by[position]);
-                        intent.putExtra("TaskUpdatedTime", updated_time[position]);
+                        intent.putExtra("TaskInstance", taskArrayList.get(position));
                         startActivity(intent);
 
                     }
