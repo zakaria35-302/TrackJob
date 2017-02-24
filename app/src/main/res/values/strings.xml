@@ -346,6 +346,8 @@
     <string name="text_employee_designation">Designation</string>
     <string name="text_employee_password">Password</string>
     <string name="text_employee_reports_to">Reports To</string>
+    <string name="job_task">Job Task</string>
+    <string name="job_task_header">Job Tasks</string>
 
 
 </resources>

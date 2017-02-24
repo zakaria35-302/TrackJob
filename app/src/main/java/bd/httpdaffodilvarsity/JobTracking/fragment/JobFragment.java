@@ -106,6 +106,7 @@ public class JobFragment extends Fragment {
             @Override
             public void onResponse(JSONArray response) {
 
+                final String[] jobId = new String[response.length()];
                 final String[] job_title = new String[response.length()];
                 final String[] job_description = new String[response.length()];
                 final String[]  job_has_deadline = new String[response.length()];
@@ -127,6 +128,7 @@ public class JobFragment extends Fragment {
 
                         JSONObject jsonObject = (JSONObject) response.get(i);
 
+                        jobId[i] = jsonObject.getString("job_id");
                         job_title[i] = jsonObject.getString("job_title");
                         job_description[i] = jsonObject.getString("job_description");
                         job_has_deadline[i] = jsonObject.getString("job_has_deadline");
@@ -155,6 +157,7 @@ public class JobFragment extends Fragment {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         Intent intent = new Intent(JobFragment.this.getActivity(), JobDetailsActivity.class);
+                        intent.putExtra("JobId", jobId[position]);
                         intent.putExtra("JobTitle", job_title[position]);
                         intent.putExtra("JobDescription", job_description[position]);
                         intent.putExtra("JobHasDeadline", job_has_deadline[position]);

@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="bd.httpdaffodilvarsity.JobTracking">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="bd.httpdaffodilvarsity.JobTracking.service.AppController"
+        android:name=".service.AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="bd.httpdaffodilvarsity.JobTracking.activity.RegistrationActivity"
+            android:name=".activity.RegistrationActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
             <intent-filter>
@@ -21,21 +22,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="bd.httpdaffodilvarsity.JobTracking.activity.AboutUsActivity"
+            android:name=".activity.AboutUsActivity"
             android:label="@string/activity_title_about_us" />
         <activity
-            android:name="bd.httpdaffodilvarsity.JobTracking.activity.PrivacyPolicyActivity"
+            android:name=".activity.PrivacyPolicyActivity"
             android:label="@string/activity_title_privacy_policy" />
-        <activity android:name="bd.httpdaffodilvarsity.JobTracking.activity.LogInActivity" />
+        <activity android:name=".activity.LogInActivity" />
         <activity
-            android:name="bd.httpdaffodilvarsity.JobTracking.activity.MainActivity"
+            android:name=".activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <!-- <activity android:name=".activity.RegistrationActivity"></activity> -->
-        <activity android:name="bd.httpdaffodilvarsity.JobTracking.activity.SetDesignation" />
-        <activity android:name="bd.httpdaffodilvarsity.JobTracking.activity.SetDepartment" />
-        <activity android:name="bd.httpdaffodilvarsity.JobTracking.activity.CreateEmployeeJob" />
-        <activity android:name="bd.httpdaffodilvarsity.JobTracking.activity.JobDetailsActivity" />
-        <activity android:name="bd.httpdaffodilvarsity.JobTracking.activity.CreateEmployeeTask" />
-        <activity android:name="bd.httpdaffodilvarsity.JobTracking.activity.TaskListDetails" />
+        <activity android:name=".activity.SetDesignation" />
+        <activity android:name=".activity.SetDepartment" />
+        <activity android:name=".activity.CreateEmployeeJob" />
+        <activity android:name=".activity.JobDetailsActivity" />
+        <activity android:name=".activity.CreateEmployeeTask" />
+        <activity android:name=".activity.TaskListDetails" />
     </application>
+
 </manifest>
